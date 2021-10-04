@@ -399,36 +399,6 @@
           </span>
         </a>
       {%- endif -%}
-              
-      <cart-drawer>
-        <details class="cart-drawer-container">
-          <summary class="header__icon header__icon--cart link link--text link link--text focus-inset" aria-label="{{ 'templates.header.cart' | t }}">
-            <span>
-              {%- liquid
-                if cart == empty
-                  render 'icon-cart-empty'
-                else
-                  render 'icon-cart'
-                endif
-              -%}
-              <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-              {%- if cart != empty -%}
-                <div class="cart-count-bubble">
-                  {%- if cart.item_count < 100 -%}
-                    <span aria-hidden="true">{{ cart.item_count }}</span>
-                  {%- endif -%}
-                  <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-                </div>
-              {%- endif -%}
-            </span>
-          </summary>
-          <div id="cart-drawer" class="cart-drawer motion-reduce" tabindex="-1">
-            <div class="cart-drawer__inner-container">
-              
-            </div>
-          </div>
-        </details>
-      </cart-drawer>
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link link--text focus-inset" id="cart-icon-bubble">
         {%- liquid
