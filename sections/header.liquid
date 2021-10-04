@@ -402,7 +402,7 @@
               
       <cart-drawer>
         <details class="cart-drawer-container">
-          <summary class="header__icon header__icon--menu header__icon--summary link link--text focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
+          <summary class="header__icon header__icon--cart link link--text link link--text focus-inset" aria-label="{{ 'templates.header.cart' | t }}">
             <span>
               {%- liquid
                 if cart == empty
@@ -422,9 +422,9 @@
               {%- endif -%}
             </span>
           </summary>
-          <div id="menu-drawer" class="menu-drawer motion-reduce" tabindex="-1">
-            <div class="menu-drawer__inner-container">
-              <div class="menu-drawer__navigation-container">
+          <div id="cart-drawer" class="cart-drawer motion-reduce" tabindex="-1">
+            <div class="cart-drawer__inner-container">
+              <div class="cart-drawer__navigation-container">
               </div>
             </div>
           </div>
